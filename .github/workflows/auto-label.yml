@@ -1,0 +1,48 @@
+name: Auto Label PR
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Auto label based on PR title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+
+            const weekMatch = title.match(/\[Week\s*(\d+)\]/i);
+            if (weekMatch) {
+              const weekNum = parseInt(weekMatch[1]);
+              let label = '';
+
+              if (weekNum >= 1 && weekNum <= 5) {
+                label = `week-${weekNum}`;
+              }
+
+              if (label) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  labels: [label]
+                });
+                console.log(`Added label: ${label}`);
+              }
+            }
+
+            // Check for "project" in title
+            if (title.toLowerCase().includes('[project]')) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                labels: ['project']
+              });
+              console.log('Added label: project');
+            }
