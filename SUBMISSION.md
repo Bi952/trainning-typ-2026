@@ -4,12 +4,12 @@
 - Fork repo này về tài khoản GitHub cá nhân
 
 ## Bước 2: Làm bài
-- Mỗi tuần tạo **branch mới** từ `main` (đặt tên: `week-1`, `week-2`,...)
+- Mỗi tuần tạo **branch mới** từ `master` (đặt tên: `week-1`, `week-2`,...)
 - Thêm bài làm vào folder tương ứng (code, tài liệu, ảnh demo,...)
 
 ### Ví dụ minh họa
 
-**Tuần 1:** Tạo branch `week-1` từ `main`, thêm bài làm vào folder `week-1/`
+**Tuần 1:** Tạo branch `week-1` từ `master`, thêm bài làm vào folder `week-1/`
 
 ```
 repo (branch: week-1)
@@ -31,7 +31,7 @@ repo (branch: week-1)
 
 ---
 
-**Tuần 2:** Tạo branch `week-2` từ `main` (KHÔNG phải từ branch `week-1`), thêm bài làm vào folder `week-2/`
+**Tuần 2:** Tạo branch `week-2` từ `master` (KHÔNG phải từ branch `week-1`), thêm bài làm vào folder `week-2/`
 
 ```
 repo (branch: week-2)
@@ -55,7 +55,7 @@ repo (branch: week-2)
 
 ---
 
-> **Quan trọng:** Mỗi tuần tạo branch mới **từ `main`**, không tạo từ branch tuần trước. Như vậy mỗi PR chỉ chứa diff của đúng tuần đó, mentor review gọn hơn.
+> **Quan trọng:** Mỗi tuần tạo branch mới **từ `master`**, không tạo từ branch tuần trước. Như vậy mỗi PR chỉ chứa diff của đúng tuần đó, mentor review gọn hơn.
 
 ## Bước 3: Tạo Pull Request
 - Tạo PR từ branch về **repo gốc** (không phải fork của bạn)
