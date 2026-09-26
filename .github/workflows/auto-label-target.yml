@@ -1,7 +1,7 @@
 name: Auto Label PR
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited]
 
 jobs:
@@ -36,7 +36,6 @@ jobs:
               }
             }
 
-            // Check for "project" in title
             if (title.toLowerCase().includes('[project]')) {
               await github.rest.issues.addLabels({
                 owner: context.repo.owner,
