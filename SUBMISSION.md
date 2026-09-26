@@ -71,7 +71,7 @@ Ví dụ:
 [Week 2] Nguyễn Văn B
 ```
 
-- Gắn **label** tương ứng: `week-1`, `week-2`, `week-3`, `week-4`, `week-5`, `project`
+> **Lưu ý:** Đặt tiêu đề đúng format để Github tự động gán label giúp mentor thuận tiện hơn trong việc review
 
 ## Bước 4: Review
 - Mentor sẽ review trên PR và comment feedback
