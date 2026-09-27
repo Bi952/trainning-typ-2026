@@ -17,7 +17,7 @@ Chương trình training Backend trong 6 tuần, gồm 5 tuần học lý thuy�
 
 ## Nộp bài
 
-Xem hướng dẫn nộp bài tại [SUBMISSION.md](./SUBMISSION.md)
+Xem hướng dẫn nộp bài tại [Hướng dẫn](https://github.com/quanglam04/trainning-typ-2026/issues/5)
 
 ## Yêu cầu chung
 
